@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Голден Стар</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo" id="logoContainer">
+                <div id="logoDisplay">
+                    <h1>Голден Стар</h1>
+                    <p>Гостиница на набережной</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="rooms.html" class="nav-link">Номера и цены</a>
+                <a href="restaurant.html" class="nav-link">Ресторан</a>
+                <a href="services.html" class="nav-link">Услуги</a>
+                <a href="contacts.html" class="nav-link active">Контакты</a>
+                <div class="auth-link-container">
+                    <a href="javascript:void(0)" onclick="openAuthModal()" class="nav-link">Войти</a>
+                </div>
+                <div class="user-info-container" style="display: none; align-items: center; gap: 15px;">
+                    <a href="javascript:void(0)" onclick="openProfile()" class="user-name-link">
+                        <span class="user-name"></span>
+                    </a>
+                    <button onclick="logout()" class="logout-btn">Выйти</button>
+                </div>
+            </nav>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Контакты</h2>
+                <p>Как нас найти и связаться с нами</p>
+            </div>
+        </section>
+
+        <section class="contacts-info">
+            <div class="container">
+                <div class="contacts-grid">
+                    <div class="contacts-details">
+                        <div class="contact-item">
+                            <h3>📍 Адрес</h3>
+                            <p>Краснодарский край, г. Тимашевск, ул. Береговая, дом 1</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>📞 Телефоны</h3>
+                            <p>+7 (918) 129-33-26</p>
+                            <p>+7 (861) 991-00-22</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>✉️ Email</h3>
+                            <p>info@goldenstar-hotel.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>🚗 Как добраться</h3>
+                            <p>Ж/д вокзал Тимашевская — 2,45 км</p>
+                            <p>Аэропорт Краснодар — 65,74 км</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Написать нам</h3>
+                        <form id="contactForm">
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="email" placeholder="Ваш email" required>
+                            <textarea rows="4" placeholder="Ваше сообщение" required></textarea>
+                            <button type="submit" class="btn btn-primary">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h3>Мы на карте</h3>
+                <div class="map-placeholder">
+                    <p>📍 ул. Береговая, 1, Тимашевск</p>
+                    <p>Гостиница расположена на набережной реки Кирпили</p>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acda6180d0cd762fb2cc586d9e6171cd190a15dd9a54243dce55b73218b79dc57&amp;source=constructor" width="1043" height="400" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <h4>Голден Стар</h4>
+                    <p>Гостиница на набережной<br>г. Тимашевск</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p>📞 +7 (918) 129-33-26</p>
+                    <p>📞 +7 (861) 991-00-22</p>
+                    <p>📧 info@goldenstar-hotel.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Адрес</h4>
+                    <p>Краснодарский край,<br>г. Тимашевск, ул. Береговая, 1</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Социальные сети</h4>
+                    <p>📱 ВКонтакте</p>
+                    <p>📱 Telegram</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Гостиница «Голден Стар». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

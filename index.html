@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Голден Стар - Гостиница на набережной Тимашевска</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo" id="logoContainer">
+                <div id="logoDisplay">
+                    <h1>Голден Стар</h1>
+                    <p>Гостиница на набережной</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Главная</a>
+                <a href="rooms.html" class="nav-link">Номера и цены</a>
+                <a href="restaurant.html" class="nav-link">Ресторан</a>
+                <a href="services.html" class="nav-link">Услуги</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="admin.html" class="nav-link" id="adminLink" style="display: none;">Админ-панель</a>
+                <div class="auth-link-container">
+                    <a href="javascript:void(0)" onclick="openAuthModal()" class="nav-link">Войти</a>
+                </div>
+                <div class="user-info-container" style="display: none; align-items: center; gap: 15px;">
+                    <a href="javascript:void(0)" onclick="openProfile()" class="user-name-link">
+                        <span class="user-name"></span>
+                    </a>
+                    <button onclick="logout()" class="logout-btn">Выйти</button>
+                </div>
+            </nav>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Добро пожаловать в Голден Стар</h2>
+                <p>Уютная гостиница на набережной реки Кирпили с панорамным видом</p>
+                <a href="rooms.html" class="btn btn-primary">Забронировать номер</a>
+            </div>
+        </section>
+
+        <section class="quick-booking">
+            <div class="container">
+                <h3>Быстрое бронирование</h3>
+                <form id="quickBookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label>Дата заезда</label>
+                        <input type="date" id="checkIn" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Дата выезда</label>
+                        <input type="date" id="checkOut" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Количество гостей</label>
+                        <input type="number" id="guests" min="1" max="4" value="2" required>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Выбрать номер</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="container">
+                <h3>Наши преимущества</h3>
+                <div class="advantages-grid">
+                    <div class="advantage-card"><div class="advantage-icon">🏞️</div><h4>Вид на реку</h4><p>Панорамный вид на реку Кирпили из большинства номеров</p></div>
+                    <div class="advantage-card"><div class="advantage-icon">🐾</div><h4>Размещение с животными</h4><p>Принимаем гостей с домашними питомцами без дополнительной платы</p></div>
+                    <div class="advantage-card"><div class="advantage-icon">⭐</div><h4>Рейтинг 5.0</h4><p>Более 600 положительных отзывов на Яндекс Путешествиях</p></div>
+                    <div class="advantage-card"><div class="advantage-icon">🍽️</div><h4>Ресторан</h4><p>Вкусная домашняя кухня, летняя терраса с видом на реку</p></div>
+                    <div class="advantage-card"><div class="advantage-icon">🚗</div><h4>Бесплатная парковка</h4><p>Охраняемая парковка на территории отеля</p></div>
+                    <div class="advantage-card"><div class="advantage-icon">📶</div><h4>Бесплатный Wi-Fi</h4><p>Высокоскоростной интернет на всей территории</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review-form-section">
+            <div class="container">
+                <h3>Оставить отзыв</h3>
+                <form id="reviewForm" class="review-form">
+                    <div class="form-group">
+                        <input type="text" id="reviewName" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ваша оценка:</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 звёзд">★</label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 звезды">★</label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 звезды">★</label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 звезды">★</label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 звезда">★</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="reviewText" rows="3" placeholder="Ваш отзыв" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="container">
+                <h3>Отзывы наших гостей</h3>
+                <div class="reviews-slider" id="reviewsSlider"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col"><h4>Голден Стар</h4><p>Гостиница на набережной<br>г. Тимашевск</p></div>
+                <div class="footer-col"><h4>Контакты</h4><p>📞 +7 (918) 129-33-26</p><p>📞 +7 (861) 991-00-22</p><p>📧 info@goldenstar-hotel.com</p></div>
+                <div class="footer-col"><h4>Адрес</h4><p>Краснодарский край,<br>г. Тимашевск, ул. Береговая, 1</p></div>
+                <div class="footer-col"><h4>Социальные сети</h4><p>📱 ВКонтакте</p><p>📱 Telegram</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Гостиница «Голден Стар». Все права защищены.</p></div>
+        </div>
+    </footer>
+
+    <div id="authModal" class="auth-modal">
+        <div class="auth-container"><span class="auth-close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs"><div class="auth-tab active" onclick="switchAuthTab('login')">Вход</div><div class="auth-tab" onclick="switchAuthTab('register')">Регистрация</div></div>
+            <div id="loginForm" class="auth-form active"><input type="email" id="loginEmail" placeholder="Email"><input type="password" id="loginPassword" placeholder="Пароль"><button class="btn btn-primary" onclick="login()">Войти</button></div>
+            <div id="registerForm" class="auth-form"><input type="text" id="regName" placeholder="Ваше имя"><input type="email" id="regEmail" placeholder="Email"><input type="tel" id="regPhone" placeholder="Телефон"><input type="password" id="regPassword" placeholder="Пароль (мин. 4 символа)"><input type="password" id="regConfirmPassword" placeholder="Подтвердите пароль"><button class="btn btn-primary" onclick="register()">Зарегистрироваться</button></div>
+        </div>
+    </div>
+
+    <div id="roomModal" class="room-modal"><div id="roomModalContent" class="room-modal-content"></div></div>
+
+    <div id="profileModal" class="auth-modal">
+        <div class="auth-container" style="max-width: 600px;">
+            <span class="auth-close" onclick="closeProfileModal()">&times;</span>
+            <h2 style="color:#1a3a4f; margin-bottom:20px">Личный кабинет</h2>
+            <div id="profileContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

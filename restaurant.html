@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресторан - Голден Стар</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo" id="logoContainer">
+                <div id="logoDisplay">
+                    <h1>Голден Стар</h1>
+                    <p>Гостиница на набережной</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="rooms.html" class="nav-link">Номера и цены</a>
+                <a href="restaurant.html" class="nav-link active">Ресторан</a>
+                <a href="services.html" class="nav-link">Услуги</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <div class="auth-link-container">
+                    <a href="javascript:void(0)" onclick="openAuthModal()" class="nav-link">Войти</a>
+                </div>
+                <div class="user-info-container" style="display: none; align-items: center; gap: 15px;">
+                    <a href="javascript:void(0)" onclick="openProfile()" class="user-name-link">
+                        <span class="user-name"></span>
+                    </a>
+                    <button onclick="logout()" class="logout-btn">Выйти</button>
+                </div>
+            </nav>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Ресторан «Голден Стар»</h2>
+                <p>Гастрономическая достопримечательность Тимашевска</p>
+            </div>
+        </section>
+
+        <section class="restaurant-info">
+            <div class="container">
+                <div class="restaurant-grid">
+                    <div class="restaurant-text">
+                        <h3>О ресторане</h3>
+                        <p>Ресторан гостиницы «Голден Стар» — это не просто место для приема пищи, а настоящая гастрономическая достопримечательность Тимашевска. Гости отмечают вкусную домашнюю кухню, большие порции и демократичные цены.</p>
+                        <p>Особой любовью пользуются борщ, солянка, пицца, суши-башня и фирменный чай с имбирем, лимоном и клюквой.</p>
+                        <p>Летняя терраса с видом на реку — идеальное место для завтрака или ужина на свежем воздухе.</p>
+                    </div>
+                    <div class="restaurant-features">
+                        <h3>Режим работы</h3>
+                        <p>🍳 Завтрак: 07:00 — 10:00</p>
+                        <p>🍽️ Обед: 12:00 — 16:00</p>
+                        <p>🍷 Ужин: 18:00 — 22:00</p>
+                        <p>☕ Бар: 10:00 — 23:00</p>
+                        <p>📞 Бронирование столов: +7 (918) 129-33-26</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Меню в виде таблицы -->
+        <section class="menu-section">
+            <div class="container">
+                <h3>Меню ресторана</h3>
+                
+                <!-- Завтраки -->
+                <div class="menu-category">
+                    <h4>🍳 Завтраки (подаются с 07:00 до 10:00)</h4>
+                    <table class="menu-table">
+                        <thead>
+                            <tr><th>Блюдо</th><th>Описание</th><th>Цена</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Завтрак «Классический»</td><td>Глазунья из 2 яиц, бекон, тост, сливочное масло</td><td>250 ₽</td></tr>
+                            <tr><td>Завтрак «Английский»</td><td>Омлет с ветчиной и сыром, бекон, фасоль, тост</td><td>350 ₽</td></tr>
+                            <tr><td>Завтрак «Овощной»</td><td>Омлет с овощами (помидоры, перец, шпинат), тост</td><td>300 ₽</td></tr>
+                            <tr><td>Сырники</td><td>Домашние сырники со сметаной и ягодным соусом</td><td>280 ₽</td></tr>
+                            <tr><td>Блинчики</td><td>Блинчики с творогом, сгущенкой или джемом</td><td>250 ₽</td></tr>
+                            <tr><td>Каша</td><td>Овсяная / рисовая / пшенная на молоке</td><td>180 ₽</td></tr>
+                            <tr><td>Йогурт с гранолой</td><td>Натуральный йогурт, домашняя гранола, свежие ягоды</td><td>220 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Горячие блюда -->
+                <div class="menu-category">
+                    <h4>🍖 Горячие блюда</h4>
+                    <table class="menu-table">
+                        <thead><tr><th>Блюдо</th><th>Описание</th><th>Цена</th></tr></thead>
+                        <tbody>
+                            <tr><td>Стейк из говядины</td><td>Мраморная говядина, картофель гриль, соус демиглас</td><td>890 ₽</td></tr>
+                            <tr><td>Свиная отбивная</td><td>Свиная корейка, запеченная с сыром, овощи гриль</td><td>590 ₽</td></tr>
+                            <tr><td>Куриное филе</td><td>Куриная грудка в сливочном соусе, рис, овощи</td><td>490 ₽</td></tr>
+                            <tr><td>Утиная грудка</td><td>Утка с ягодным соусом, запеченный картофель</td><td>750 ₽</td></tr>
+                            <tr><td>Лосось на гриле</td><td>Филе лосося, овощи гриль, соус песто</td><td>890 ₽</td></tr>
+                            <tr><td>Котлеты домашние</td><td>Куриные котлеты с сыром, картофельное пюре</td><td>390 ₽</td></tr>
+                            <tr><td>Плов</td><td>Плов из баранины с изюмом и барбарисом</td><td>450 ₽</td></tr>
+                            <tr><td>Паста Карбонара</td><td>Спагетти, бекон, сливочный соус, пармезан</td><td>420 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Супы -->
+                <div class="menu-category">
+                    <h4>🥣 Супы</h4>
+                    <table class="menu-table">
+                        <thead><tr><th>Блюдо</th><th>Описание</th><th>Цена</th></tr></thead>
+                        <tbody>
+                            <tr><td>Борщ</td><td>Классический борщ со сметаной, пампушка с чесноком</td><td>290 ₽</td></tr>
+                            <tr><td>Солянка сборная</td><td>Солянка с говядиной, колбасками, оливками, лимоном</td><td>320 ₽</td></tr>
+                            <tr><td>Крем-суп из тыквы</td><td>Нежный сливочный суп из тыквы, тыквенные семечки</td><td>250 ₽</td></tr>
+                            <tr><td>Куриный суп</td><td>Домашний куриный суп с лапшой и зеленью</td><td>220 ₽</td></tr>
+                            <tr><td>Уха</td><td>Уха из семги, картофель, зелень</td><td>350 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Салаты -->
+                <div class="menu-category">
+                    <h4>🥗 Салаты</h4>
+                    <table class="menu-table">
+                        <thead><tr><th>Блюдо</th><th>Описание</th><th>Цена</th></tr></thead>
+                        <tbody>
+                            <tr><td>Греческий салат</td><td>Помидоры, огурцы, перец, маслины, фета, оливковое масло</td><td>320 ₽</td></tr>
+                            <tr><td>Цезарь с курицей</td><td>Курица, салат айсберг, пармезан, сухарики, соус Цезарь</td><td>380 ₽</td></tr>
+                            <tr><td>Салат с лососем</td><td>Слабосоленый лосось, микс салатов, авокадо, цитрусовая заправка</td><td>450 ₽</td></tr>
+                            <tr><td>Оливье</td><td>Классический салат Оливье с курицей</td><td>280 ₽</td></tr>
+                            <tr><td>Винегрет</td><td>Свекла, морковь, картофель, горошек, соленый огурец</td><td>220 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Закуски -->
+                <div class="menu-category">
+                    <h4>🍢 Закуски</h4>
+                    <table class="menu-table">
+                        <thead><tr><th>Блюдо</th><th>Описание</th><th>Цена</th></tr></thead>
+                        <tbody>
+                            <tr><td>Сырная тарелка</td><td>Ассорти из 4 видов сыра, мед, орехи</td><td>490 ₽</td></tr>
+                            <tr><td>Мясная тарелка</td><td>Ассорти из домашней ветчины, буженины, салями</td><td>520 ₽</td></tr>
+                            <tr><td>Суши-башня</td><td>Ассорти из 24 роллов и 8 нигири</td><td>1250 ₽</td></tr>
+                            <tr><td>Сельдь под шубой</td><td>Сельдь, картофель, свекла, морковь, майонез</td><td>270 ₽</td></tr>
+                            <tr><td>Брускетты</td><td>Тост, икра минтая, сливочный сыр, лосось</td><td>290 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Пицца -->
+                <div class="menu-category">
+                    <h4>🍕 Пицца</h4>
+                    <table class="menu-table">
+                        <thead><tr><th>Блюдо</th><th>Описание</th><th>Цена</th></tr></thead>
+                        <tbody>
+                            <tr><td>Маргарита</td><td>Томатный соус, моцарелла, базилик</td><td>390 ₽</td></tr>
+                            <tr><td>Пепперони</td><td>Томатный соус, моцарелла, пепперони</td><td>450 ₽</td></tr>
+                            <tr><td>4 сыра</td><td>Сливочный соус, моцарелла, пармезан, дор блю, горгонзола</td><td>490 ₽</td></tr>
+                            <tr><td>Гавайская</td><td>Томатный соус, курица, ананас, моцарелла</td><td>460 ₽</td></tr>
+                            <tr><td>Цезарь пицца</td><td>Сливочный соус, курица, помидоры, салат, пармезан</td><td>480 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Десерты -->
+                <div class="menu-category">
+                    <h4>🍰 Десерты</h4>
+                    <table class="menu-table">
+                        <thead><tr><th>Блюдо</th><th>Описание</th><th>Цена</th></tr></thead>
+                        <tbody>
+                            <tr><td>Медовик</td><td>Классический медовый торт</td><td>210 ₽</td></tr>
+                            <tr><td>Наполеон</td><td>Хрустящий торт с заварным кремом</td><td>220 ₽</td></tr>
+                            <tr><td>Чизкейк</td><td>Нью-Йорк чизкейк с ягодным соусом</td><td>230 ₽</td></tr>
+                            <tr><td>Панна котта</td><td>Сливочный десерт с малиновым соусом</td><td>190 ₽</td></tr>
+                            <tr><td>Мороженое</td><td>Пломбир / шоколадное / клубничное</td><td>120 ₽</td></tr>
+                            <tr><td>Блинчики с нутелой</td><td>Горячие блинчики с шоколадной пастой</td><td>200 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Напитки -->
+                <div class="menu-category">
+                    <h4>☕ Напитки</h4>
+                    <table class="menu-table">
+                        <thead><tr><th>Напиток</th><th>Описание</th><th>Цена</th></tr></thead>
+                        <tbody>
+                            <tr><td>Фирменный чай</td><td>Чай с имбирем, лимоном, медом и клюквой</td><td>150 ₽</td></tr>
+                            <tr><td>Чай черный / зеленый</td><td>Листовой чай</td><td>90 ₽</td></tr>
+                            <tr><td>Кофе американо</td><td>Эспрессо с водой</td><td>100 ₽</td></tr>
+                            <tr><td>Кофе капучино</td><td>Эспрессо, молочная пена</td><td>130 ₽</td></tr>
+                            <tr><td>Кофе латте</td><td>Эспрессо, вспененное молоко</td><td>140 ₽</td></tr>
+                            <tr><td>Горячий шоколад</td><td>Густой горячий шоколад со взбитыми сливками</td><td>160 ₽</td></tr>
+                            <tr><td>Морс</td><td>Клюквенный / брусничный морс</td><td>90 ₽</td></tr>
+                            <tr><td>Лимонад</td><td>Домашний лимонад с мятой и лимоном</td><td>120 ₽</td></tr>
+                            <tr><td>Сок</td><td>Апельсиновый / яблочный / гранатовый</td><td>80 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="menu-note">
+                    <p>⭐ При заказе на сумму от 2000 рублей — десерт в подарок!</p>
+                    <p>🍽️ Доступна доставка по городу от 1000 рублей — бесплатно</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col"><h4>Голден Стар</h4><p>Гостиница на набережной<br>г. Тимашевск</p></div>
+                <div class="footer-col"><h4>Контакты</h4><p>📞 +7 (918) 129-33-26</p><p>📞 +7 (861) 991-00-22</p><p>📧 info@goldenstar-hotel.com</p></div>
+                <div class="footer-col"><h4>Адрес</h4><p>Краснодарский край,<br>г. Тимашевск, ул. Береговая, 1</p></div>
+                <div class="footer-col"><h4>Социальные сети</h4><p>📱 ВКонтакте</p><p>📱 Telegram</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Гостиница «Голден Стар». Все права защищены.</p></div>
+        </div>
+    </footer>
+
+    <div id="authModal" class="auth-modal">
+        <div class="auth-container"><span class="auth-close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs"><div class="auth-tab active" onclick="switchAuthTab('login')">Вход</div><div class="auth-tab" onclick="switchAuthTab('register')">Регистрация</div></div>
+            <div id="loginForm" class="auth-form active"><input type="email" id="loginEmail" placeholder="Email"><input type="password" id="loginPassword" placeholder="Пароль"><button class="btn btn-primary" onclick="login()">Войти</button></div>
+            <div id="registerForm" class="auth-form"><input type="text" id="regName" placeholder="Ваше имя"><input type="email" id="regEmail" placeholder="Email"><input type="tel" id="regPhone" placeholder="Телефон"><input type="password" id="regPassword" placeholder="Пароль (мин. 4 символа)"><input type="password" id="regConfirmPassword" placeholder="Подтвердите пароль"><button class="btn btn-primary" onclick="register()">Зарегистрироваться</button></div>
+        </div>
+    </div>
+
+    <div id="profileModal" class="auth-modal">
+        <div class="auth-container" style="max-width: 600px;">
+            <span class="auth-close" onclick="closeProfileModal()">&times;</span>
+            <h2 style="color:#1a3a4f; margin-bottom:20px">Личный кабинет</h2>
+            <div id="profileContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

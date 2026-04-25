@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модерация сообщений - Админ-панель</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo"><h1>Голден Стар</h1><p>Админ-панель</p></div>
+                <nav class="nav">
+                    <a href="admin.html" class="nav-link">Управление номерами</a>
+                    <a href="admin-reviews.html" class="nav-link">Отзывы</a>
+                    <a href="admin-messages.html" class="nav-link active">Сообщения</a>
+                    <a href="index.html" class="nav-link">На сайт</a>
+                    <div class="user-info-container" style="display: flex; align-items: center; gap: 15px;">
+                        <span class="user-name" id="adminName"></span>
+                        <button onclick="logout()" class="logout-btn">Выйти</button>
+                    </div>
+                </nav>
+                <div class="mobile-menu-btn">☰</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container"><h2>Модерация сообщений</h2><p>Просмотр и удаление сообщений из формы обратной связи</p></div>
+        </section>
+
+        <section class="messages-moderation">
+            <div class="container">
+                <div id="messagesList" class="messages-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
